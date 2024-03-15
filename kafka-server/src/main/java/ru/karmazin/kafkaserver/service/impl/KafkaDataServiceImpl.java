@@ -1,15 +1,15 @@
 package ru.karmazin.kafkaserver.service.impl;
 
 import lombok.RequiredArgsConstructor;
+import org.springframework.kafka.core.KafkaTemplate;
 import org.springframework.stereotype.Service;
-import ru.karmazin.kafkaserver.kafka.KafkaProducer;
 import ru.karmazin.kafkaserver.model.Data;
 import ru.karmazin.kafkaserver.service.KafkaDataService;
 
 @Service
 @RequiredArgsConstructor
 public class KafkaDataServiceImpl implements KafkaDataService {
-    private final KafkaProducer<Data> kafkaProducer;
+    private final KafkaTemplate<String, Object> kafkaTemplate;
 
     @Override
     public void send(Data data) {
@@ -18,6 +18,6 @@ public class KafkaDataServiceImpl implements KafkaDataService {
             case VOLTAGE -> "data-voltage";
             case POWER -> "data-power";
         };
-        kafkaProducer.sendData(topic, data);
+        kafkaTemplate.send(topic, data);
     }
 }

@@ -1,4 +1,4 @@
-package ru.karmazin.kafkaserver.model;
+package ru.karmazin.kafkatester.model;
 
 import lombok.Getter;
 import lombok.NoArgsConstructor;

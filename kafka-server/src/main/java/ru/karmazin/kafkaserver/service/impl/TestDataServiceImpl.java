@@ -4,6 +4,7 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import ru.karmazin.kafkaserver.model.Data;
 import ru.karmazin.kafkaserver.model.test.DataTestOptions;
+import ru.karmazin.kafkaserver.service.KafkaDataService;
 import ru.karmazin.kafkaserver.service.TestDataService;
 
 import java.time.LocalDateTime;
@@ -16,7 +17,7 @@ import java.util.concurrent.TimeUnit;
 public class TestDataServiceImpl implements TestDataService {
     private final ScheduledExecutorService executorService
             = Executors.newSingleThreadScheduledExecutor();
-    private final KafkaDataServiceImpl kafkaDataService;
+    private final KafkaDataService kafkaDataService;
 
     @Override
     public void send(DataTestOptions testOptions) {

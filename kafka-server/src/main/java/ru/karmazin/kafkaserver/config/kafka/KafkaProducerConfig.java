@@ -8,6 +8,7 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.kafka.core.DefaultKafkaProducerFactory;
 import org.springframework.kafka.core.KafkaTemplate;
 import org.springframework.kafka.core.ProducerFactory;
+import org.springframework.kafka.support.serializer.JsonDeserializer;
 import org.springframework.kafka.support.serializer.JsonSerializer;
 import ru.karmazin.kafkaserver.config.ApplicationProperties;
 
@@ -20,16 +21,17 @@ public class KafkaProducerConfig {
     private final ApplicationProperties properties;
 
     @Bean
-    public ProducerFactory<String, String> producerFactory() {
+    public ProducerFactory<String, Object> producerFactory() {
         Map<String, Object> configProps = new HashMap<>();
         configProps.put(ProducerConfig.BOOTSTRAP_SERVERS_CONFIG, properties.getBootstrapAddress());
         configProps.put(ProducerConfig.KEY_SERIALIZER_CLASS_CONFIG, StringSerializer.class);
         configProps.put(ProducerConfig.VALUE_SERIALIZER_CLASS_CONFIG, JsonSerializer.class);
+        configProps.put(JsonDeserializer.TYPE_MAPPINGS, "data:ru.karmazin.kafkaserver.model.Data");
         return new DefaultKafkaProducerFactory<>(configProps);
     }
 
     @Bean
-    public KafkaTemplate<String, String> kafkaTemplate() {
+    public KafkaTemplate<String, Object> kafkaTemplate() {
         return new KafkaTemplate<>(producerFactory());
     }
 }
