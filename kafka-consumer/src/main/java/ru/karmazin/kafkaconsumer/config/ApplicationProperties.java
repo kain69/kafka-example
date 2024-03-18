@@ -1,4 +1,4 @@
-package ru.karmazin.kafkatester.config;
+package ru.karmazin.kafkaconsumer.config;
 
 import lombok.Getter;
 import org.springframework.beans.factory.annotation.Value;

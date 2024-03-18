@@ -4,7 +4,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>ru.karmazin</groupId>
-    <artifactId>kafka-tester</artifactId>
+    <artifactId>kafka-consumer</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>kafka-tester</name>
     <description>kafka-tester</description>

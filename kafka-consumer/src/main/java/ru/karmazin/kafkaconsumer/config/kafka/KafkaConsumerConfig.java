@@ -1,4 +1,4 @@
-package ru.karmazin.kafkatester.config.kafka;
+package ru.karmazin.kafkaconsumer.config.kafka;
 
 import lombok.RequiredArgsConstructor;
 import org.apache.kafka.clients.consumer.ConsumerConfig;
@@ -9,7 +9,7 @@ import org.springframework.kafka.config.ConcurrentKafkaListenerContainerFactory;
 import org.springframework.kafka.core.ConsumerFactory;
 import org.springframework.kafka.core.DefaultKafkaConsumerFactory;
 import org.springframework.kafka.support.serializer.JsonDeserializer;
-import ru.karmazin.kafkatester.config.ApplicationProperties;
+import ru.karmazin.kafkaconsumer.config.ApplicationProperties;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -27,7 +27,7 @@ public class KafkaConsumerConfig {
         configProps.put(ConsumerConfig.KEY_DESERIALIZER_CLASS_CONFIG, StringDeserializer.class);
         configProps.put(ConsumerConfig.VALUE_DESERIALIZER_CLASS_CONFIG, JsonDeserializer.class);
         configProps.put(JsonDeserializer.TRUSTED_PACKAGES, "*");
-        configProps.put(JsonDeserializer.TYPE_MAPPINGS, "data:ru.karmazin.kafkatester.model.Data");
+        configProps.put(JsonDeserializer.TYPE_MAPPINGS, "data:ru.karmazin.kafkaconsumer.model.Data");
         return new DefaultKafkaConsumerFactory<>(configProps);
     }
 

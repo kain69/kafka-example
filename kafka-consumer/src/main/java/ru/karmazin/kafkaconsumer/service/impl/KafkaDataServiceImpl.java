@@ -1,13 +1,12 @@
-package ru.karmazin.kafkatester.service.impl;
+package ru.karmazin.kafkaconsumer.service.impl;
 
 import lombok.RequiredArgsConstructor;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.kafka.annotation.KafkaListener;
 import org.springframework.stereotype.Service;
-import ru.karmazin.kafkatester.config.ApplicationProperties;
-import ru.karmazin.kafkatester.model.Data;
-import ru.karmazin.kafkatester.service.KafkaDataService;
+import ru.karmazin.kafkaconsumer.model.Data;
+import ru.karmazin.kafkaconsumer.service.KafkaDataService;
 
 @Service
 @RequiredArgsConstructor
