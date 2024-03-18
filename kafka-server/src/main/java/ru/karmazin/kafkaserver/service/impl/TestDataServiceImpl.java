@@ -2,8 +2,8 @@ package ru.karmazin.kafkaserver.service.impl;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
-import ru.karmazin.kafkaserver.model.Data;
-import ru.karmazin.kafkaserver.model.test.DataTestOptions;
+import ru.karmazin.kafkacore.model.Data;
+import ru.karmazin.kafkacore.model.test.DataTestOptions;
 import ru.karmazin.kafkaserver.service.KafkaDataService;
 import ru.karmazin.kafkaserver.service.TestDataService;
 

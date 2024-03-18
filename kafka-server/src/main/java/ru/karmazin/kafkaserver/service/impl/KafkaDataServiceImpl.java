@@ -3,7 +3,7 @@ package ru.karmazin.kafkaserver.service.impl;
 import lombok.RequiredArgsConstructor;
 import org.springframework.kafka.core.KafkaTemplate;
 import org.springframework.stereotype.Service;
-import ru.karmazin.kafkaserver.model.Data;
+import ru.karmazin.kafkacore.model.Data;
 import ru.karmazin.kafkaserver.service.KafkaDataService;
 
 @Service

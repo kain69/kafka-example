@@ -1,10 +1,10 @@
-package ru.karmazin.kafkaserver.web.dto;
+package ru.karmazin.kafkacore.web.dto;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
-import ru.karmazin.kafkaserver.model.Data;
+import ru.karmazin.kafkacore.model.Data;
 
 import java.time.LocalDateTime;
 

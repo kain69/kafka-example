@@ -1,14 +1,14 @@
-package ru.karmazin.kafkaserver.web.dto;
+package ru.karmazin.kafkacore.model.test;
 
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
-import ru.karmazin.kafkaserver.model.Data;
+import ru.karmazin.kafkacore.model.Data;
 
 @NoArgsConstructor
 @Getter
 @Setter
-public class DataTestOptionsDto {
+public class DataTestOptions {
     private int delayInSeconds;
     private Data.MeasurementType[] measurementTypes;
 }

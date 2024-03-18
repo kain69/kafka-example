@@ -1,4 +1,4 @@
-package ru.karmazin.kafkaconsumer.model;
+package ru.karmazin.kafkacore.model;
 
 import lombok.Getter;
 import lombok.NoArgsConstructor;

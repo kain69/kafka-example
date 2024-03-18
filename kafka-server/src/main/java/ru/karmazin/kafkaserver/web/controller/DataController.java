@@ -5,12 +5,12 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-import ru.karmazin.kafkaserver.model.Data;
-import ru.karmazin.kafkaserver.model.test.DataTestOptions;
+import ru.karmazin.kafkacore.model.Data;
+import ru.karmazin.kafkacore.model.test.DataTestOptions;
+import ru.karmazin.kafkacore.web.dto.DataDto;
+import ru.karmazin.kafkacore.web.dto.DataTestOptionsDto;
 import ru.karmazin.kafkaserver.service.KafkaDataService;
 import ru.karmazin.kafkaserver.service.TestDataService;
-import ru.karmazin.kafkaserver.web.dto.DataDto;
-import ru.karmazin.kafkaserver.web.dto.DataTestOptionsDto;
 import ru.karmazin.kafkaserver.web.mapper.DataMapper;
 import ru.karmazin.kafkaserver.web.mapper.DataTestOptionsMapper;
 
